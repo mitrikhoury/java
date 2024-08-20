@@ -5192,3 +5192,12 @@ Caused by: java.lang.Exception: File not found: C:\Users\mk1\OneDrive - Axsos AG
 2024-08-20 15:51:21,790 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-08-20 15:51:21,795 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-08-20 15:51:21,802 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\counter\src\test\resources
+2024-08-20 15:51:34,496 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:51:34,499 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:51:34,503 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\counter\src\test\resources
+2024-08-20 15:51:51,299 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:51:51,302 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:51:51,307 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\counter\src\test\resources
+2024-08-20 15:52:09,927 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:52:09,930 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-20 15:52:09,935 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\counter\src\test\resources
