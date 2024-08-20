@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.Date"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,5 @@
      <%} %>
      <h3> the Time is : <%= new Date() %></h3>
 
-     
 </body>
 </html>
