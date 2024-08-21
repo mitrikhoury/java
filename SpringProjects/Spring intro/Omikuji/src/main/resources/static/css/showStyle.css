@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.cotainer{
+margin : 15px auto;
+padding :20px;
+display:flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+}
+.messageBox{
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid black;
+  width: 300px;
+  margin: 15px;
+}

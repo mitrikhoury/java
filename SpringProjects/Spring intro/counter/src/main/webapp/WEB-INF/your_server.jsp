@@ -8,7 +8,6 @@
 </head>
 <body>
 <h1> welcome user !</h1>
-
 <a href="your_server/counter">check  counter</a>
 <br>
 <a href="/incrementByTwo">Increment counter by 2</a>
