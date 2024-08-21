@@ -5559,3 +5559,9 @@ Caused by: java.lang.Exception: File not found: C:\Users\mk1\OneDrive - Axsos AG
 2024-08-21 11:11:01,592 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-08-21 11:11:01,597 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-08-21 11:11:01,602 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\Omikuji\src\test\resources
+2024-08-21 11:11:13,978 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-21 11:11:13,984 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-08-21 11:11:13,992 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\Omikuji\src\test\resources
+2024-08-21 11:11:29,244 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-08-21 11:11:29,259 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-08-21 11:11:29,271 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mk1\OneDrive - Axsos AG\Desktop\java\SpringProjects\Spring intro\Omikuji\src\test\resources
