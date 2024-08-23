@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Burger Tracker</title>
 <style>
  body {
     font-family: Arial, sans-serif;
@@ -40,6 +40,7 @@
 margin :10px;
 padding :25px;
 border: 2px solid black; 
+border-radius: 10px;
 }
 .BtnSend{
   color: white;
@@ -60,6 +61,7 @@ border: 2px solid black;
                 <th>Burger Name</th>
                 <th>Restaurant Name</th>
                 <th>Rating (out of 5)</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -68,6 +70,7 @@ border: 2px solid black;
                     <td><c:out value="${burgers.getName()}"/></td>
                     <td><c:out value="${burgers.getResturantName()}"/></td>
                     <td><c:out value="${burgers.getRating()}"/></td>
+                    <td><a href="/burger/edit/${burgers.getId()}">Edit</a></td>
                 </tr>
             </c:forEach>
         </tbody>
