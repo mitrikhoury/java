@@ -1,7 +1,8 @@
 package com.axsos.ProjectManger.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -32,8 +33,11 @@ public class Project {
     @Size(min=3, message="Description must be at least 3 characters")
     private String description;
     
+    
+//    @DateFormat(pattern = "yyyy-mm-dd")
+//    @
     @Future(message="Due date must be in the future")
-    private Date dueDate;
+    private LocalDate dueDate;
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="lead_id")
@@ -48,74 +52,62 @@ public class Project {
     private List<User> teamMembers;
     
     public Project() {
-		// TODO Auto-generated constructor stub
-	}
+        // Default constructor
+    }
 
-	public Project(
-			@NotEmpty(message = "Title is required") @Size(min = 3, message = "Title must be at least 3 characters") String title,
-			@NotEmpty(message = "Description is required") @Size(min = 3, message = "Description must be at least 3 characters") String description,
-			@Future(message = "Due date must be in the future") Date dueDate, User lead, List<User> teamMembers) {
-		super();
-		this.title = title;
-		this.description = description;
-		this.dueDate = dueDate;
-		this.lead = lead;
-		this.teamMembers = teamMembers;
-	}
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Date getDueDate() {
+    public LocalDate getDueDate() {
 		return dueDate;
 	}
 
-	public void setDueDate(Date dueDate) {
+	public void setDueDate(LocalDate dueDate) {
 		this.dueDate = dueDate;
 	}
+    
+    public User getLead() {
+        return lead;
+    }
 
-	public User getLead() {
-		return lead;
-	}
 
 	public void setLead(User lead) {
-		this.lead = lead;
-	}
+        this.lead = lead;
+    }
 
-	public List<User> getTeamMembers() {
-		return teamMembers;
-	}
+    public List<User> getTeamMembers() {
+        return teamMembers;
+    }
 
-	public void setTeamMembers(List<User> teamMembers) {
-		this.teamMembers = teamMembers;
-	}
+    public void setTeamMembers(List<User> teamMembers) {
+        this.teamMembers = teamMembers;
+    }
 
-	@Override
-	public String toString() {
-		return "Project [id=" + id + ", title=" + title + ", description=" + description + ", dueDate=" + dueDate
-				+ ", lead=" + lead + ", teamMembers=" + teamMembers + "]";
-	}
-    
-    
+    @Override
+    public String toString() {
+        return "Project [id=" + id + ", title=" + title + ", description=" + description + ", dueDate=" + dueDate
+                + ", lead=" + lead + ", teamMembers=" + teamMembers + "]";
+    }
 }

@@ -1,6 +1,10 @@
 package com.axsos.ProjectManger.Controller;
 
+import java.text.DateFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.datetime.standard.DateTimeFormatterRegistrar;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -90,15 +94,19 @@ public class Controllerr {
 
  @PostMapping("/projects/new")
  public String createProject(@Valid @ModelAttribute("project") Project project, BindingResult result, HttpSession session) {
-     if (session.getAttribute("userId") == null) {
+    
+	 
+	 if (session.getAttribute("userId") == null) {
          return "redirect:/logout";
      }
      if (result.hasErrors()) {
+    	 System.out.print("res "+result);
          return "newProject.jsp";
      }
      Long userId = (Long) session.getAttribute("userId");
      User user = userServ.findById(userId);
      project.setLead(user);
+    
      projectServ.createProject(project);
      return "redirect:/dashboard";
  }
@@ -110,7 +118,7 @@ public class Controllerr {
      }
      Project project = projectServ.findProject(id);
      model.addAttribute("project", project);
-     return "project_details.jsp";
+     return "projectDetails.jsp";
  }
 
  @GetMapping("/projects/edit/{id}")
@@ -123,19 +131,24 @@ public class Controllerr {
      return "edit_project.jsp";
  }
 
- @PutMapping("/projects/edit/{id}")
+ @PostMapping("/projects/edit/{id}")
  public String updateProject(@Valid @ModelAttribute("project") Project project, BindingResult result, HttpSession session) {
      if (session.getAttribute("userId") == null) {
          return "redirect:/logout";
      }
      if (result.hasErrors()) {
+    	 System.out.println("res" + result);
          return "edit_project.jsp";
      }
+  
+     Long userId = (Long) session.getAttribute("userId");
+     User user = userServ.findById(userId);
+     project.setLead(user);
      projectServ.updateProject(project);
      return "redirect:/dashboard";
  }
 
- @DeleteMapping("/projects/delete/{id}")
+ @PostMapping("/projects/delete/{id}")
  public String deleteProject(@PathVariable("id") Long id, HttpSession session) {
      if (session.getAttribute("userId") == null) {
          return "redirect:/logout";

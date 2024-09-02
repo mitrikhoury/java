@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Project</title>
-    <style>
-       h1 {
+<meta charset="UTF-8">
+<title>Edit Project</title>
+<style>
+
+   h1 {
 	color: #AF37FF;
 }
 
@@ -25,13 +27,12 @@
 	width: 150px;
 	height: 25px;
 }
-    
-    
-    </style>
+
+</style>
 </head>
 <body>
-    <h1>Create a Project</h1>
-    <form:form method="POST" class="form" modelAttribute="project" action="/projects/new">
+ <h1>Edit Project</h1>
+  <form:form method="POST" modelAttribute="project" class="form" action="/projects/edit/${project.getId()}">
         <form:errors path="*" cssClass="error" />
         Title: <form:input  type="text"  path="title"/><br />
         Description: <form:textarea path="description" /><br />
