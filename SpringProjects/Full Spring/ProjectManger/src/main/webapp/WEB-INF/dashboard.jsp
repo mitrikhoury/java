@@ -43,8 +43,13 @@ margin: 10px;
 	background-color: rgb(43, 120, 228);
 	margin-top: 10px;
 	box-shadow: 3px 1px 1px black;
-	width: 150px;
-	height: 25px;
+	width: 50px;
+	height: 20px;
+	text-decoration :none;
+	border: 1px solid black;'
+}
+.BtnSend h:hover {
+	cursor: progress;
 }
 </style>
 </head>
@@ -84,13 +89,13 @@ margin: 10px;
 				<td>${project.lead.firstName}${project.lead.lastName}</td>
 				<td>${project.dueDate}</td>
 				<td><c:if test="${project.lead.id == user.id}">
-						<a href="/projects/edit/${project.id}">Edit</a>
+						<a href="/projects/edit/${project.id}" Class="BtnSend">Edit</a>
 						<form action="/projects/delete/${project.id}" method="POST"
 							style="display: inline">
 							<input type="hidden" name="_method" value="DELETE" /> <input
 								type="submit" Class="BtnSend" value="Delete" />
 						</form>
-					</c:if> <a href="/projects/${project.id}/leave">Leave team</a></td>
+					</c:if> <a href="/projects/${project.id}/leave"  Class="BtnSend">Leave team</a></td>
 			</tr>
 		</c:forEach>
 	</table>
